@@ -85,7 +85,7 @@ do{
     cout << "2 - Listar as contas cadastradas\n";
     cout << "3 - Consultar uma conta pelo número.\n";
     cout << "4 - Realizar depósitos\n";
-    cout << "5 - Realizar saques, verificando saldo suficiente\n";
+    cout << "5 - Realizar saques\n";
     cout << "6 - Realizar transferências entre duas contas\n";
     cout << "7 - Exibir o extrato de uma conta\n";
     cout << "Escolha uma opção: ";  
@@ -113,13 +113,13 @@ do{
 
     ofstream arquivo1("movimentacoes.txt");
     
-    if (arquivo.is_open()) {
+    if (arquivo1.is_open()) {
         for (int i = 0; i < quantidadeMovimentacoes; i++) {
-            arquivo << contaMovimentacao[i] << ";"
+            arquivo1 << contaMovimentacao[i] << ";"
             << tipoMovimentacao[i] << ";"
             << valorMovimentacao[i] << endl;
             }
-        arquivo.close();
+        arquivo1.close();
     }
     
     //Seguir ordem, numeroConta, nomeCliente, cpf, tipoConta (Poupança/Corrente), saldoAtual
