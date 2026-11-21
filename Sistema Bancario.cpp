@@ -449,6 +449,7 @@ do{
         if (banco != -1) {
             cout << "Conta de origem ou destino nao encontrada!\n";
         }
+        break;
         
        // 7 - Exibir o extrato de uma conta
        
